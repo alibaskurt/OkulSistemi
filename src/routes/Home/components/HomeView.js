@@ -1,12 +1,14 @@
 import React from 'react'
-import DuckImage from '../assets/Duck.jpg'
-import './HomeView.scss'
+import AuthViewManeger from './AuthView/AuthViewManeger'
 
 export const HomeView = () => (
-  <div>
-    <h4>Welcome!</h4>
-    <img alt='This is a duck, because Redux!' className='duck' src={DuckImage} />
-  </div>
+    <div className="home-container">
+        <div className="container">
+            <h1>öğretmenler için<br />başlangıç noktası!</h1>
+            <AuthViewManeger />
+        </div>
+    </div>
+
 )
 
 export default HomeView

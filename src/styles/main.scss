@@ -1,9 +1,14 @@
 @import 'base';
 @import '~bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&subset=latin-ext');
 
-// Some best-practice CSS that's useful for most apps
-// Just remove them if they're not what you want
-html {
+:root{
+--primary-color : #86BC42;
+--text-color : #2e1616;
+--font-family : 'Lato' , sans-serif
+}
+
+ html {
   box-sizing: border-box;
 }
 
@@ -12,10 +17,103 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: var(--font-family);
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+header{
+  background-color: #fff;
+  box-shadow: 3px 0 8px rgba(0,0,0,0.5);
+  position: fixed;
+  width: 100%;
+}
+
+header .navbar-brand{
+  color: var(--primary-color) !important;
+  font-family:  var(--font-family);
+}
+header .nav-link{
+  color: var(--text-color) !important;
+  font-family:  var(--font-family);
+  text-transform: uppercase;
+}
+
+header .nav-link:hover{
+  color : var(--primary-color) !important;
+}
+
+header .active{
+  color : var(--primary-color) !important;
+  font-weight: bold;
+}
+
+header .navbar-collapse {
+    flex-basis: 100% !important;
+    @media (min-width: 992px){
+      flex-basis: auto !important;
+      flex-grow: 0 !important;
+    }
+  }
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+.page-layout__viewport {
+  padding-top: 4rem;
+}
+
+.page-layout__nav-item--active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+.home-container{
+  background-image: url('images/home.jpg');
+  height:1000px;
+  background-size: cover;
+  padding-top:60px;
+}
+
+h1{
+  text-align: center;
+  color:var(--text-color);
+  font-family:var(--font-family);
+  text-transform: uppercase;
+  margin-top: 80px;
+  font-weight: bold;
+  text-shadow: 5px 0 8px rgba(0,0,0,0.5);
+}
+form{
+  width: 516px;
+  margin: auto;
+  margin-top:50px;
+}
+
+.btn-primary{
+  background-color: var(--primary-color);
+  border-color:transparent;
+}
+.btn-primary:hover{
+  background-color: #242C42;
+  border-color:transparent;
+}
+a{
+  color : var(--primary-color);
+  font-weight: bold;
+}
+a:hover{
+  color : var(--primary-color);
+  font-weight: bold;
+}
+
+p{
+  text-align : center;
+  margin-top:40px;
+  color : var(--text-color);
 }
